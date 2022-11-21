@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instaclon/create_page.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({Key? key}) : super(key: key);
@@ -12,7 +13,9 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () => {},
+        onPressed: () => {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => CreatePage()))
+        },
         child: Icon(Icons.create),
         backgroundColor: Colors.blue,
       ),
